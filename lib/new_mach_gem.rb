@@ -11,12 +11,14 @@ module NewMachGem
         result=x1*x2
       elsif(str=='/')
         result=x1/x2
+      elsif (str=='**')
+        result=power(x1,x2)
       end
       result
     end
 
     def method_missing(*args)
-      return 666
+      return "Вызвался method_missing"
     end
   end
 end
