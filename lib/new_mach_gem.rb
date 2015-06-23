@@ -14,5 +14,9 @@ module NewMachGem
       end
       result
     end
+
+    def method_missing(*args)
+      return 666
+    end
   end
 end
