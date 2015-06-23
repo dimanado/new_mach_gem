@@ -17,7 +17,7 @@ module NewMachGem
       result
     end
 
-    def method_missing(*args)
+    def self.method_missing(*args)
       return "Вызвался method_missing"
     end
   end
