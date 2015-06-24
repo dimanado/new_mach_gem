@@ -1,4 +1,5 @@
-require "new_mach_gem/version"
+require 'new_mach_gem/version'
+require 'new_mach_gem/my_exception'
 
 module NewMachGem
   class MathematicalOperations
@@ -10,6 +11,7 @@ module NewMachGem
       elsif(str=='*')
         result=x1*x2
       elsif(str=='/')
+        raise MyException.new('Деление на 0') if x1.zero?
         result=x1/x2
       elsif (str=='**')
         result=power(x1,x2)
